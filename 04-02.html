@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form id="testform" action="serve.jsp" method="post">
+		  <input type="text" placeholder="input me" autofocus><br />
+		  text: <input type="text" id="greeting" name="greeting" autocomplete="on" value="" list="greetings" />
+		  <datalist id="greetings" style="display: none;">
+		  	<option value="Good Morning">Good Morning</option>
+		  	<option value="Hello">Hello</option>
+		  	<option value="Good Afternoon">Good Afternoon</option>
+		  </datalist>
+		  <input type="submit" name="s1" value="v1" formaction="s1.jsp" formmethod="post"/>提交到s1
+		  <input type="submit" name="s2" value="v2" formaction="s2.jsp" formmethod="get"/>提交到s2
+		  <input type="submit" name="s3" value="v3" formaction="s3.jsp"/>提交到s3
+		  <input type="submit"/>
+		</form>
+	</body>
+</html>
