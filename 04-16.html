@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>progress元素的使用示例</title>
+		<!--[if IE]> 
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+		<script type="text/javascript" charset="utf-8">
+			var i = 10;
+			function button_onclick()
+			{
+				var progressBar = document.getElementById("p");
+				progressBar.getElementsByTagName("span")[0].textContent = 0;
+				//for(var i=0; i<=100; i++)
+				updateProgress(i);
+				if(i == 100)
+					i = 0;
+				else
+					i += 10;
+			}
+			function updateProgress(newValue)
+			{
+				var progressBar =document.getElementById("p");
+				progressBar.value = newValue;
+				progressBar.getElementsByTagName('span')[0].textContent = newValue;
+			}
+		</script>
+	</head>
+	<body>
+		<section>
+			<h2>progress元素的使用示例</h2>
+			<p>完成百分比：<progress id="p" max="100" value="0"><span>0</span>%</progress></p>
+			<input type="button" onclick="button_onclick()" value="请点击" />
+		</section>
+		<section>
+			<p>磁盘使用量：<meter value="40" min="0" max="160">40/160</meter>GB</p>
+			<p>你的得分是：
+			<meter value="91" min="0" max="100" low="40" high="90" optimum="100">A+</meter>
+			</p>
+			<!--
+            	作者：handcreate@163.com
+            	时间：2014-09-10
+            	描述：不是一定要使用属性
+            -->
+            <meter>80%</meter><br />
+            <meter>3/4</meter><br />
+            <!--
+            	作者：handcreate@163.com
+            	时间：2014-09-10
+            	描述：下面的写法是不正确的，因为画面上什么都不显示
+            -->
+            <meter min="0" max="100" value="75"></meter>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Blob对象使用示例</title>
+		<script type="text/javascript" charset="utf-8">
+			function ShowFileType()
+			{
+				var file;
+				file = document.getElementById("file").files[0];
+				var size = document.getElementById("size");
+				size.innerHTML=file.size;
+				var type = document.getElementById("type");
+				type.innerHTML=file.type;
+			}
+		</script>
+	</head>
+	<body>
+		选择文件：
+		<input type="file" id="file" accept="image/*"/>
+		<input type="button" value="显示文件信息" onclick="ShowFileType();" /><br />
+		文件字节长度：<span id="size"></span><br />
+		文件类型：<span id="type"></span>
+	</body>
+</html>
